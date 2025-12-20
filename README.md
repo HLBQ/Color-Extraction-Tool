@@ -2,7 +2,7 @@
 
 一个简洁美观的桌面颜色选择器应用程序，使用Python和pywebview构建，支持屏幕取色、颜色格式转换和自定义标题栏。
 
-![应用截图]()
+![应用截图](https://heilibaiqi.top/warehousetools/007/exe.png)
 
 ## 功能特性
 
