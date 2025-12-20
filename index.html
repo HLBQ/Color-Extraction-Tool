@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简约取色器</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body class="standard-mode">
+    <!-- 自定义标题栏 -->
+    <div id="customTitleBar" class="custom-title-bar">
+        <div class="title-bar-title">取色工具</div>
+        <div class="title-bar-buttons">
+            <button class="title-bar-btn" id="pinBtn" title="置顶">
+                <i class="fas fa-thumbtack"></i>
+            </button>
+
+            <button class="title-bar-btn" id="minimizeBtn" title="最小化">
+                <i class="fas fa-window-minimize"></i>
+            </button>
+            <!-- <button class="title-bar-btn" id="maximizeBtn" title="最大化">
+                <i class="fas fa-window-maximize"></i>
+            </button> -->
+            <button class="title-bar-btn" id="compactBtn" title="精简模式">
+                <i class="fas fa-compress"></i>
+            </button>
+            <button class="title-bar-btn close-btn" id="closeBtn" title="关闭">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="color-box">
+            <div class="color-preview" id="colorPreview">
+                <button class="pick-btn" id="pickBtn">
+                    <i class="fas fa-eye-dropper"></i>
+                </button>
+            </div>
+            
+            <div class="color-info no-select">
+                <div class="info-item" id="hexItem" data-value="hex">
+                    <div class="info-label" >HEX</div>
+                    <div class="info-value" id="hexValue">#FFFFFF</div>
+                </div>
+                
+                <div class="info-item" id="rgbItem" data-value="rgb">
+                    <div class="info-label">RGB</div>
+                    <div class="info-value" id="rgbValue">rgb(255, 255, 255)</div>
+                </div>
+                
+                <div class="info-item" id="hslItem" data-value="hsl">
+                    <div class="info-label">HSL</div>
+                    <div class="info-value" id="hslValue">hsl(0, 0%, 100%)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 快捷键提示 -->
+    <div id="shortcutHint" class="shortcut-hint">
+        <div>Tips:</div>
+        <div>Esc: 退出取色状态</div>
+        <div>Ctrl+R: 随机颜色</div>
+        <div>点击右侧代码可复制</div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('selectstart', e => e.preventDefault());
+        document.addEventListener('copy', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+          if (e.ctrlKey && e.key === 'a') e.preventDefault();
+        });
+    </script>
+</body>
+</html>
