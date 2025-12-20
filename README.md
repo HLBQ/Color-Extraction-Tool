@@ -1,4 +1,4 @@
-# 取色工具 (Color Picker Tool)
+# 取色工具 (Color Extraction Tool)
 
 一个简洁美观的桌面颜色提取应用程序，使用Python和pywebview构建，支持屏幕直接取色。
 
@@ -162,3 +162,4 @@ A: 目前仅支持Windows，因为使用了pywin32库。如需跨平台支持，
 
 
 *如果这个项目对你有帮助，请给个Star⭐支持一下！*
+
