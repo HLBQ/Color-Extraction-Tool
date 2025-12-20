@@ -10,8 +10,8 @@ import sys
 import subprocess
 
 def build_exe():
-    if not os.path.exists('color_picker_app.py'):
-        print("错误: color_picker_app.py 文件不存在")
+    if not os.path.exists('Color.Extraction.Tool.py'):
+        print("错误: Color.Extraction.Tool.py 文件不存在")
         return 1
     main_files = ['index.html', 'style.css', 'script.js']
     missing_files = []
@@ -43,7 +43,7 @@ def build_exe():
         'pyinstaller',
         '--onefile',  # 单文件exe
         '--windowed',  # 隐藏控制台窗口
-        '--name', '取色工具',  # 使用中文名称
+        '--name', 'Color Extraction Tool',  # 使用中文名称
         '--version-file', 'version_info.txt', 
 
         '--collect-all=webview',   # 仅收集webview核心依赖
@@ -71,7 +71,7 @@ def build_exe():
         '--hidden-import', 'webview.platforms.win32',  # 补充win32平台依赖
         '--hidden-import', 'pythonnet',
         '--clean',  # 清理临时文件
-        'color_picker_app.py'
+        'Color.Extraction.Tool.py'
     ]
     print(f"正在执行命令: {' '.join(cmd)}")
     result = subprocess.run(cmd, capture_output=True, text=True)

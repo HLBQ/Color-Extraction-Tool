@@ -1,6 +1,6 @@
 # 取色工具 (Color Picker Tool)
 
-一个简洁美观的桌面颜色选择器应用程序，使用Python和pywebview构建，支持屏幕取色、颜色格式转换和自定义标题栏。
+一个简洁美观的桌面颜色提取应用程序，使用Python和pywebview构建，支持屏幕直接取色。
 
 ![应用截图](https://heilibaiqi.top/warehousetools/007/exe.png)
 
@@ -31,7 +31,7 @@
 pip install pywebview pywin32
 
 # 运行应用
-python color_picker_app.py
+python Color.Extraction.Tool.py
 ```
 
 ### 2. 使用打包版本
@@ -59,7 +59,7 @@ python color_picker_app.py
 
 ```
 color-picker/
-├── color_picker_app.py    # 主应用程序（Python后端）
+├── Color.Extraction.Tool.py    # 主应用程序（Python后端）
 ├── index.html             # 主界面HTML
 ├── style.css              # 样式表
 ├── script.js              # 前端交互逻辑
@@ -95,7 +95,7 @@ pip install pywebview pywin32 pyinstaller
 python build.py
 
 # 或直接使用PyInstaller
-pyinstaller --onefile --windowed --name "取色工具" color_picker_app.py
+pyinstaller --onefile --windowed --name "取色工具" Color.Extraction.Tool.py
 ```
 
 打包后的exe文件将生成在 `dist/` 目录中。
@@ -103,7 +103,7 @@ pyinstaller --onefile --windowed --name "取色工具" color_picker_app.py
 ### 自定义修改
 
 - **修改界面**：编辑 `index.html`、`style.css`、`script.js`
-- **调整功能**：修改 `color_picker_app.py` 中的Python逻辑
+- **调整功能**：修改 `Color.Extraction.Tool.py` 中的Python逻辑
 - **更换图标**：替换 `icon.ico` 文件
 - **更新版本**：编辑 `version_info.txt`
 
@@ -147,12 +147,18 @@ A: 目前仅支持Windows，因为使用了pywin32库。如需跨平台支持，
 
 ### v1.0.0 (2025-12-20)
 - 初始版本发布
-- 基本取色功能
-- 三种颜色格式支持
-- 自定义标题栏
-- 窗口置顶和精简模式
-- 打包为独立exe
-
 ---
+
+
+### 下载应用最新版本
+- [Windows 版](https://github.com/HLBQ/color-picker/releases/tag/v1.0)
+
+
+
+### 在线版本
+ 如果您这是想使用而不下载该工具，可以使用下面的网页版本
+- [网页版](https://heilibaiqi.top/warehousetools/007/tool/)
+
+
 
 *如果这个项目对你有帮助，请给个Star⭐支持一下！*
